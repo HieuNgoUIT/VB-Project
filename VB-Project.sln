@@ -3,7 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "QLGara", "QLGara\QLGara.vbproj", "{06C31B2E-A00F-4A3F-B055-6B7AD2F47CC1}"
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "QLGaraDAL", "QLGaraDAL\QLGaraDAL.vbproj", "{4EB7E999-16AA-4A07-A752-ABDF729A16A4}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "QLGaraDTO", "QLGaraDTO\QLGaraDTO.vbproj", "{F0EB91D2-5F38-42A7-A7AE-5C33279F9541}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "QLGaraBUS", "QLGaraBUS\QLGaraBUS.vbproj", "{CDEE9039-69A8-492D-AA99-903D1A845BAA}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "QLGaraGUI", "QLGaraGUI\QLGaraGUI.vbproj", "{B031C0FE-E517-4522-A7AF-7B4ADF2E7F04}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Utility", "Utility\Utility.vbproj", "{A6DF8D09-6627-4D80-9303-394640233EC1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +19,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{06C31B2E-A00F-4A3F-B055-6B7AD2F47CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{06C31B2E-A00F-4A3F-B055-6B7AD2F47CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{06C31B2E-A00F-4A3F-B055-6B7AD2F47CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{06C31B2E-A00F-4A3F-B055-6B7AD2F47CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EB7E999-16AA-4A07-A752-ABDF729A16A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EB7E999-16AA-4A07-A752-ABDF729A16A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EB7E999-16AA-4A07-A752-ABDF729A16A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EB7E999-16AA-4A07-A752-ABDF729A16A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0EB91D2-5F38-42A7-A7AE-5C33279F9541}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0EB91D2-5F38-42A7-A7AE-5C33279F9541}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0EB91D2-5F38-42A7-A7AE-5C33279F9541}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0EB91D2-5F38-42A7-A7AE-5C33279F9541}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDEE9039-69A8-492D-AA99-903D1A845BAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDEE9039-69A8-492D-AA99-903D1A845BAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDEE9039-69A8-492D-AA99-903D1A845BAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDEE9039-69A8-492D-AA99-903D1A845BAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B031C0FE-E517-4522-A7AF-7B4ADF2E7F04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B031C0FE-E517-4522-A7AF-7B4ADF2E7F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B031C0FE-E517-4522-A7AF-7B4ADF2E7F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B031C0FE-E517-4522-A7AF-7B4ADF2E7F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6DF8D09-6627-4D80-9303-394640233EC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6DF8D09-6627-4D80-9303-394640233EC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6DF8D09-6627-4D80-9303-394640233EC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6DF8D09-6627-4D80-9303-394640233EC1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
