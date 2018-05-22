@@ -4,4 +4,10 @@
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub XuấtPhiếuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles XuấtPhiếuToolStripMenuItem.Click
+        Dim frm As XuatPhieuGUI = New XuatPhieuGUI()
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

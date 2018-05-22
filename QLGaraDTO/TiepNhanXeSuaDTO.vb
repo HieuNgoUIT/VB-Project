@@ -13,7 +13,12 @@
         Me.DienThoai = dienthoai
         Me.HieuXe = hieuxe
         Me.TenChuXe = tenchuxe
-        Me.DiaChi = ngaytiepnhan
+        Me.DiaChi = diachi
+        Me.NgayTiepNhan = ngaytiepnhan
+    End Sub
+    Public Sub New(bienso As String, ngaytiepnhan As String)
+        Me.BienSo = bienso
+        Me.NgayTiepNhan = ngaytiepnhan
     End Sub
     Public Property BienSo1 As String
         Get
