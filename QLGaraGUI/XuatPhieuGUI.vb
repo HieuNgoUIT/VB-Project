@@ -2,8 +2,12 @@
 Imports QLGaraDTO
 Imports QLGaraBUS
 Imports Utility
+Imports System.Data.SqlClient
+
 Public Class XuatPhieuGUI
+    Private xeBus As TiepNhanXeSuaBUS
     Private lxBus As XuatPhieuBus
+    Private xe As TiepNhanXeSuaDTO
     Private Sub frmDanhSachLoaiHocSinh_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
         lxBus = New XuatPhieuBus()
@@ -67,5 +71,46 @@ Public Class XuatPhieuGUI
 
     Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
 
+    End Sub
+
+    Private Sub tbTienCong_TextChanged(sender As Object, e As EventArgs) Handles tbTienCong.TextChanged
+        tbThanhTien.Text = tbSoLuong.Text * tbDonGia.Text + tbTienCong.Text
+
+    End Sub
+
+    Private Sub tbSoLuong_TextChanged(sender As Object, e As EventArgs) Handles tbSoLuong.TextChanged
+        'tbThanhTien.Text = tbSoLuong.Text * tbDonGia.Text + tbTienCong.Text
+    End Sub
+
+    Private Sub tbDonGia_TextChanged(sender As Object, e As EventArgs) Handles tbDonGia.TextChanged
+        '  tbThanhTien.Text = tbSoLuong.Text * tbDonGia.Text + tbTienCong.Text
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim query As String = String.Empty
+        query &= " UPDATE [TIEPNHAN] SET"
+        query &= " [THANHTIEN] = '{0}' "
+        query &= " WHERE "
+        query &= " [BIENSO] = '{1}' "
+        query = String.Format(query, tbThanhTien.Text, txBienXe.Text)
+
+        Using conn As New SqlConnection("Data Source=DESKTOP-M4843TO\SQLEXPRESS;Initial Catalog=VBPROJECT;Integrated Security=True")
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                End With
+                Try
+                    conn.Open()
+                    comm.ExecuteNonQuery()
+                    MessageBox.Show("thêm thành tiền thành công")
+                Catch ex As Exception
+                    conn.Close()
+
+                    ' Return New Result(False, "Thêm Xe không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
     End Sub
 End Class

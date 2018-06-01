@@ -6,6 +6,7 @@
     Private TenChuXe As String
     Private NgayTiepNhan As String
     Private DiaChi As String
+    Private ThanhTien As Integer
     Public Sub New()
     End Sub
     Public Sub New(bienso As String, dienthoai As Integer, hieuxe As String, tenchuxe As String, ngaytiepnhan As String, diachi As String)
@@ -71,6 +72,15 @@
         End Get
         Set(value As String)
             DiaChi = value
+        End Set
+    End Property
+
+    Public Property ThanhTien1 As Integer
+        Get
+            Return ThanhTien
+        End Get
+        Set(value As Integer)
+            ThanhTien = value
         End Set
     End Property
 End Class

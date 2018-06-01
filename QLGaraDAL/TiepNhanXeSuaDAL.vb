@@ -16,8 +16,8 @@ Public Class TiepNhanXeSuaDAL
     End Sub
     Public Function insertXe(xe As TiepNhanXeSuaDTO) As Result
         Dim query As String = String.Empty
-        query &= "INSERT INTO [TIEPNHAN] ([TENCHUXE], [BIENSO], [HIEUXE],[DIACHI],[DIENTHOAI],[NGAYTIEPNHAN])"
-        query &= "VALUES (@TENCHUXE, @BIENSO, @HIEUXE,@DIACHI,@DIENTHOAI,@NGAYTIEPNHAN)"
+        query &= "INSERT INTO [TIEPNHAN] ([TENCHUXE], [BIENSO], [HIEUXE],[DIACHI],[DIENTHOAI],[NGAYTIEPNHAN],[THANHTIEN])"
+        query &= "VALUES (@TENCHUXE, @BIENSO, @HIEUXE,@DIACHI,@DIENTHOAI,@NGAYTIEPNHAN,@THANHTIEN)"
 
         Using conn As New SqlConnection("Data Source=DESKTOP-M4843TO\SQLEXPRESS;Initial Catalog=VBPROJECT;Integrated Security=True")
             Using comm As New SqlCommand()
@@ -31,6 +31,7 @@ Public Class TiepNhanXeSuaDAL
                     .Parameters.AddWithValue("@DIACHI", xe.DiaChi1)
                     .Parameters.AddWithValue("@DIENTHOAI", xe.DienThoai1)
                     .Parameters.AddWithValue("@NGAYTIEPNHAN", xe.NgayTiepNhan1)
+                    .Parameters.AddWithValue("@THANHTIEN", xe.ThanhTien1)
                 End With
                 Try
                     conn.Open()

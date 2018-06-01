@@ -40,7 +40,7 @@ Public Class XuatPhieuDAL
                     Console.WriteLine(ex.StackTrace)
                     conn.Close()
                     ' them that bai!!!
-                    Return New Result(False, "Lấy tất cả loại học sinh không thành công", ex.StackTrace)
+                    Return New Result(False, "Lấy tất cả loại xe không thành công", ex.StackTrace)
                 End Try
             End Using
         End Using

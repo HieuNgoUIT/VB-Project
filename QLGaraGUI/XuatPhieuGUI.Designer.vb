@@ -28,15 +28,15 @@ Partial Class XuatPhieuGUI
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.tbVatTu = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.tbSoLuong = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.tbDonGia = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.tbTienCong = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.tbThanhTien = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -95,12 +95,12 @@ Partial Class XuatPhieuGUI
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Nội dung"
         '
-        'TextBox3
+        'tbVatTu
         '
-        Me.TextBox3.Location = New System.Drawing.Point(187, 380)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(433, 20)
-        Me.TextBox3.TabIndex = 7
+        Me.tbVatTu.Location = New System.Drawing.Point(187, 380)
+        Me.tbVatTu.Name = "tbVatTu"
+        Me.tbVatTu.Size = New System.Drawing.Size(433, 20)
+        Me.tbVatTu.TabIndex = 7
         '
         'Label4
         '
@@ -111,12 +111,13 @@ Partial Class XuatPhieuGUI
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Vật tư"
         '
-        'TextBox4
+        'tbSoLuong
         '
-        Me.TextBox4.Location = New System.Drawing.Point(187, 429)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(433, 20)
-        Me.TextBox4.TabIndex = 9
+        Me.tbSoLuong.Location = New System.Drawing.Point(187, 429)
+        Me.tbSoLuong.Name = "tbSoLuong"
+        Me.tbSoLuong.Size = New System.Drawing.Size(433, 20)
+        Me.tbSoLuong.TabIndex = 9
+        Me.tbSoLuong.Text = "0"
         '
         'Label5
         '
@@ -127,12 +128,13 @@ Partial Class XuatPhieuGUI
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "Số lượng"
         '
-        'TextBox5
+        'tbDonGia
         '
-        Me.TextBox5.Location = New System.Drawing.Point(187, 481)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(433, 20)
-        Me.TextBox5.TabIndex = 11
+        Me.tbDonGia.Location = New System.Drawing.Point(187, 481)
+        Me.tbDonGia.Name = "tbDonGia"
+        Me.tbDonGia.Size = New System.Drawing.Size(433, 20)
+        Me.tbDonGia.TabIndex = 11
+        Me.tbDonGia.Text = "0"
         '
         'Label6
         '
@@ -143,12 +145,13 @@ Partial Class XuatPhieuGUI
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "đơn giá"
         '
-        'TextBox6
+        'tbTienCong
         '
-        Me.TextBox6.Location = New System.Drawing.Point(187, 523)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(433, 20)
-        Me.TextBox6.TabIndex = 13
+        Me.tbTienCong.Location = New System.Drawing.Point(187, 523)
+        Me.tbTienCong.Name = "tbTienCong"
+        Me.tbTienCong.Size = New System.Drawing.Size(433, 20)
+        Me.tbTienCong.TabIndex = 13
+        Me.tbTienCong.Text = "0"
         '
         'Label7
         '
@@ -159,12 +162,13 @@ Partial Class XuatPhieuGUI
         Me.Label7.TabIndex = 12
         Me.Label7.Text = "Tiền công"
         '
-        'TextBox7
+        'tbThanhTien
         '
-        Me.TextBox7.Location = New System.Drawing.Point(187, 564)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(433, 20)
-        Me.TextBox7.TabIndex = 15
+        Me.tbThanhTien.Location = New System.Drawing.Point(187, 564)
+        Me.tbThanhTien.Name = "tbThanhTien"
+        Me.tbThanhTien.ReadOnly = True
+        Me.tbThanhTien.Size = New System.Drawing.Size(433, 20)
+        Me.tbThanhTien.TabIndex = 15
         '
         'Label8
         '
@@ -226,15 +230,15 @@ Partial Class XuatPhieuGUI
         Me.Controls.Add(Me.txBienXe)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox7)
+        Me.Controls.Add(Me.tbThanhTien)
         Me.Controls.Add(Me.Label8)
-        Me.Controls.Add(Me.TextBox6)
+        Me.Controls.Add(Me.tbTienCong)
         Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.TextBox5)
+        Me.Controls.Add(Me.tbDonGia)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.tbSoLuong)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.tbVatTu)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label3)
@@ -256,15 +260,15 @@ Partial Class XuatPhieuGUI
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents TextBox2 As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents tbVatTu As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents tbSoLuong As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents tbDonGia As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents tbTienCong As TextBox
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents tbThanhTien As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label9 As Label
