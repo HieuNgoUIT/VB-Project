@@ -46,4 +46,41 @@ Public Class XuatPhieuDAL
         End Using
         Return New Result(True) ' thanh cong
     End Function
+    Public Function getNextID(ByRef nextID As Integer) As Result
+
+        Dim query As String = String.Empty
+        query &= "SELECT TOP 1 [thutuphieu] "
+        query &= "FROM [PhieuXe] "
+        query &= "ORDER BY [thutuphieu] DESC "
+
+        Using conn As New SqlConnection(connectionString)
+            Using comm As New SqlCommand()
+                With comm
+                    .Connection = conn
+                    .CommandType = CommandType.Text
+                    .CommandText = query
+                End With
+                Try
+                    conn.Open()
+                    Dim reader As SqlDataReader
+                    reader = comm.ExecuteReader()
+                    Dim idOnDB As Integer
+                    idOnDB = Nothing
+                    If reader.HasRows = True Then
+                        While reader.Read()
+                            idOnDB = reader("thutuphieu")
+                        End While
+                    End If
+                    ' new ID = current ID + 1
+                    nextID = idOnDB + 1
+                Catch ex As Exception
+                    conn.Close()
+                    ' them that bai!!!
+                    nextID = 1
+                    Return New Result(False, "Lấy ID kế tiếp của phiếu không thành công", ex.StackTrace)
+                End Try
+            End Using
+        End Using
+        Return New Result(True) ' thanh cong
+    End Function
 End Class

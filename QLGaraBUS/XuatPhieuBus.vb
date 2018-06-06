@@ -15,4 +15,7 @@ Public Class XuatPhieuBus
         '2. insert to DB
         Return xuatphieuDAL.selectALL(listXe)
     End Function
+    Public Function getNextID(ByRef nextID As Integer) As Result
+        Return xuatphieuDAL.getNextID(nextID)
+    End Function
 End Class

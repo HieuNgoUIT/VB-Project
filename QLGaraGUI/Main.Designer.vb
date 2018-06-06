@@ -25,12 +25,13 @@ Partial Class Main
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.TiếpNhậnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.XuấtPhiếuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PhiếuThuTiềnToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TiếpNhậnToolStripMenuItem, Me.XuấtPhiếuToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TiếpNhậnToolStripMenuItem, Me.XuấtPhiếuToolStripMenuItem, Me.PhiếuThuTiềnToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(284, 24)
@@ -48,6 +49,12 @@ Partial Class Main
         Me.XuấtPhiếuToolStripMenuItem.Name = "XuấtPhiếuToolStripMenuItem"
         Me.XuấtPhiếuToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
         Me.XuấtPhiếuToolStripMenuItem.Text = "Xuất phiếu"
+        '
+        'PhiếuThuTiềnToolStripMenuItem
+        '
+        Me.PhiếuThuTiềnToolStripMenuItem.Name = "PhiếuThuTiềnToolStripMenuItem"
+        Me.PhiếuThuTiềnToolStripMenuItem.Size = New System.Drawing.Size(99, 20)
+        Me.PhiếuThuTiềnToolStripMenuItem.Text = "Phiếu Thu Tiền"
         '
         'Main
         '
@@ -70,4 +77,5 @@ Partial Class Main
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents TiếpNhậnToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents XuấtPhiếuToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PhiếuThuTiềnToolStripMenuItem As ToolStripMenuItem
 End Class

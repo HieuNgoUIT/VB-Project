@@ -25,8 +25,7 @@ Partial Class XuatPhieuGUI
         Me.Label1 = New System.Windows.Forms.Label()
         Me.dgvDanhSachXe = New System.Windows.Forms.DataGridView()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.tbSTT = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tbVatTu = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -43,7 +42,11 @@ Partial Class XuatPhieuGUI
         Me.txBienXe = New System.Windows.Forms.TextBox()
         Me.tbNgayTiepNhan = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.dgvNguyenlieu = New System.Windows.Forms.DataGridView()
+        Me.Label11 = New System.Windows.Forms.Label()
         CType(Me.dgvDanhSachXe, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvNguyenlieu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -60,7 +63,7 @@ Partial Class XuatPhieuGUI
         Me.dgvDanhSachXe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvDanhSachXe.Location = New System.Drawing.Point(94, 51)
         Me.dgvDanhSachXe.Name = "dgvDanhSachXe"
-        Me.dgvDanhSachXe.Size = New System.Drawing.Size(526, 99)
+        Me.dgvDanhSachXe.Size = New System.Drawing.Size(255, 99)
         Me.dgvDanhSachXe.TabIndex = 1
         '
         'Label2
@@ -72,19 +75,13 @@ Partial Class XuatPhieuGUI
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "STT"
         '
-        'TextBox1
+        'tbSTT
         '
-        Me.TextBox1.Location = New System.Drawing.Point(187, 292)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(433, 20)
-        Me.TextBox1.TabIndex = 3
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(187, 336)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(433, 20)
-        Me.TextBox2.TabIndex = 5
+        Me.tbSTT.Enabled = False
+        Me.tbSTT.Location = New System.Drawing.Point(187, 292)
+        Me.tbSTT.Name = "tbSTT"
+        Me.tbSTT.Size = New System.Drawing.Size(433, 20)
+        Me.tbSTT.TabIndex = 3
         '
         'Label3
         '
@@ -113,7 +110,7 @@ Partial Class XuatPhieuGUI
         '
         'tbSoLuong
         '
-        Me.tbSoLuong.Location = New System.Drawing.Point(187, 429)
+        Me.tbSoLuong.Location = New System.Drawing.Point(187, 474)
         Me.tbSoLuong.Name = "tbSoLuong"
         Me.tbSoLuong.Size = New System.Drawing.Size(433, 20)
         Me.tbSoLuong.TabIndex = 9
@@ -122,7 +119,7 @@ Partial Class XuatPhieuGUI
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(91, 429)
+        Me.Label5.Location = New System.Drawing.Point(92, 474)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(49, 13)
         Me.Label5.TabIndex = 8
@@ -130,7 +127,7 @@ Partial Class XuatPhieuGUI
         '
         'tbDonGia
         '
-        Me.tbDonGia.Location = New System.Drawing.Point(187, 481)
+        Me.tbDonGia.Location = New System.Drawing.Point(187, 426)
         Me.tbDonGia.Name = "tbDonGia"
         Me.tbDonGia.Size = New System.Drawing.Size(433, 20)
         Me.tbDonGia.TabIndex = 11
@@ -139,7 +136,7 @@ Partial Class XuatPhieuGUI
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(91, 481)
+        Me.Label6.Location = New System.Drawing.Point(92, 429)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(43, 13)
         Me.Label6.TabIndex = 10
@@ -164,6 +161,7 @@ Partial Class XuatPhieuGUI
         '
         'tbThanhTien
         '
+        Me.tbThanhTien.Enabled = False
         Me.tbThanhTien.Location = New System.Drawing.Point(187, 564)
         Me.tbThanhTien.Name = "tbThanhTien"
         Me.tbThanhTien.ReadOnly = True
@@ -220,11 +218,41 @@ Partial Class XuatPhieuGUI
         Me.Label10.TabIndex = 19
         Me.Label10.Text = "Ngày tiếp nhận"
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Items.AddRange(New Object() {"Sửa Xe", "Rửa Xe", "Bảo trì Xe"})
+        Me.ComboBox1.Location = New System.Drawing.Point(187, 336)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(433, 21)
+        Me.ComboBox1.TabIndex = 21
+        '
+        'dgvNguyenlieu
+        '
+        Me.dgvNguyenlieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvNguyenlieu.Location = New System.Drawing.Point(417, 51)
+        Me.dgvNguyenlieu.Name = "dgvNguyenlieu"
+        Me.dgvNguyenlieu.Size = New System.Drawing.Size(240, 99)
+        Me.dgvNguyenlieu.TabIndex = 22
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Enabled = False
+        Me.Label11.Location = New System.Drawing.Point(414, 19)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(116, 13)
+        Me.Label11.TabIndex = 23
+        Me.Label11.Text = "Danh sach nguyen lieu"
+        '
         'XuatPhieuGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(728, 722)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.dgvNguyenlieu)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.tbNgayTiepNhan)
         Me.Controls.Add(Me.Label10)
         Me.Controls.Add(Me.txBienXe)
@@ -240,15 +268,15 @@ Partial Class XuatPhieuGUI
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.tbVatTu)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.tbSTT)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.dgvDanhSachXe)
         Me.Controls.Add(Me.Label1)
         Me.Name = "XuatPhieuGUI"
         Me.Text = "XuatPhieuGUI"
         CType(Me.dgvDanhSachXe, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvNguyenlieu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -257,8 +285,7 @@ Partial Class XuatPhieuGUI
     Friend WithEvents Label1 As Label
     Friend WithEvents dgvDanhSachXe As DataGridView
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents tbSTT As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents tbVatTu As TextBox
     Friend WithEvents Label4 As Label
@@ -275,4 +302,7 @@ Partial Class XuatPhieuGUI
     Friend WithEvents txBienXe As TextBox
     Friend WithEvents tbNgayTiepNhan As TextBox
     Friend WithEvents Label10 As Label
+    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents dgvNguyenlieu As DataGridView
+    Friend WithEvents Label11 As Label
 End Class

@@ -26,15 +26,15 @@ Partial Class TiepNhanXeSuaGUI
         Me.tbTenChuXe = New System.Windows.Forms.TextBox()
         Me.tbBienSo = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.tbHieuXe = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.tbDiachi = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.tbDienThoai = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.tbNgayTiepNhan = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.btTiepNhanXe = New System.Windows.Forms.Button()
+        Me.cbHieuXe = New System.Windows.Forms.ComboBox()
+        Me.dtpNgayTiepNhan = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label1
@@ -70,14 +70,6 @@ Partial Class TiepNhanXeSuaGUI
         Me.Label2.Size = New System.Drawing.Size(42, 13)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Biển số"
-        '
-        'tbHieuXe
-        '
-        Me.tbHieuXe.Location = New System.Drawing.Point(204, 185)
-        Me.tbHieuXe.Name = "tbHieuXe"
-        Me.tbHieuXe.Size = New System.Drawing.Size(338, 20)
-        Me.tbHieuXe.TabIndex = 5
-        Me.tbHieuXe.Text = "c"
         '
         'Label3
         '
@@ -122,14 +114,6 @@ Partial Class TiepNhanXeSuaGUI
         Me.Label5.TabIndex = 8
         Me.Label5.Text = "điện thoại"
         '
-        'tbNgayTiepNhan
-        '
-        Me.tbNgayTiepNhan.Location = New System.Drawing.Point(204, 336)
-        Me.tbNgayTiepNhan.Name = "tbNgayTiepNhan"
-        Me.tbNgayTiepNhan.Size = New System.Drawing.Size(338, 20)
-        Me.tbNgayTiepNhan.TabIndex = 11
-        Me.tbNgayTiepNhan.Text = "f"
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -148,19 +132,34 @@ Partial Class TiepNhanXeSuaGUI
         Me.btTiepNhanXe.Text = "Tiếp Nhận"
         Me.btTiepNhanXe.UseVisualStyleBackColor = True
         '
+        'cbHieuXe
+        '
+        Me.cbHieuXe.FormattingEnabled = True
+        Me.cbHieuXe.Location = New System.Drawing.Point(204, 189)
+        Me.cbHieuXe.Name = "cbHieuXe"
+        Me.cbHieuXe.Size = New System.Drawing.Size(338, 21)
+        Me.cbHieuXe.TabIndex = 13
+        '
+        'dtpNgayTiepNhan
+        '
+        Me.dtpNgayTiepNhan.Location = New System.Drawing.Point(204, 343)
+        Me.dtpNgayTiepNhan.Name = "dtpNgayTiepNhan"
+        Me.dtpNgayTiepNhan.Size = New System.Drawing.Size(338, 20)
+        Me.dtpNgayTiepNhan.TabIndex = 14
+        '
         'TiepNhanXeSuaGUI
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(744, 522)
+        Me.Controls.Add(Me.dtpNgayTiepNhan)
+        Me.Controls.Add(Me.cbHieuXe)
         Me.Controls.Add(Me.btTiepNhanXe)
-        Me.Controls.Add(Me.tbNgayTiepNhan)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.tbDienThoai)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.tbDiachi)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.tbHieuXe)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.tbBienSo)
         Me.Controls.Add(Me.Label2)
@@ -177,13 +176,13 @@ Partial Class TiepNhanXeSuaGUI
     Friend WithEvents tbTenChuXe As TextBox
     Friend WithEvents tbBienSo As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents tbHieuXe As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents tbDiachi As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents tbDienThoai As TextBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents tbNgayTiepNhan As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents btTiepNhanXe As Button
+    Friend WithEvents cbHieuXe As ComboBox
+    Friend WithEvents dtpNgayTiepNhan As DateTimePicker
 End Class

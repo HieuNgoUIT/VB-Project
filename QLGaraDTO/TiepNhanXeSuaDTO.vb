@@ -1,7 +1,7 @@
 ﻿Public Class TiepNhanXeSuaDTO
 
     Private BienSo As String
-    Private DienThoai As Integer
+    Private DienThoai As String
     Private HieuXe As String
     Private TenChuXe As String
     Private NgayTiepNhan As String
@@ -9,7 +9,7 @@
     Private ThanhTien As Integer
     Public Sub New()
     End Sub
-    Public Sub New(bienso As String, dienthoai As Integer, hieuxe As String, tenchuxe As String, ngaytiepnhan As String, diachi As String)
+    Public Sub New(bienso As String, dienthoai As String, hieuxe As String, tenchuxe As String, ngaytiepnhan As String, diachi As String)
         Me.BienSo = bienso
         Me.DienThoai = dienthoai
         Me.HieuXe = hieuxe
@@ -21,6 +21,11 @@
         Me.BienSo = bienso
         Me.NgayTiepNhan = ngaytiepnhan
     End Sub
+    Public Sub New(bienso As String, tenchuxe As String, dienthoai As String)
+        Me.BienSo = bienso
+        Me.TenChuXe = tenchuxe
+        Me.DienThoai = dienthoai
+    End Sub
     Public Property BienSo1 As String
         Get
             Return BienSo
@@ -30,11 +35,11 @@
         End Set
     End Property
 
-    Public Property DienThoai1 As Integer
+    Public Property DienThoai1 As String
         Get
             Return DienThoai
         End Get
-        Set(value As Integer)
+        Set(value As String)
             DienThoai = value
         End Set
     End Property

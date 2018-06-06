@@ -15,4 +15,5 @@ Public Class TiepNhanXeSuaBUS
         '2. insert to DB
         Return xeDAL.insertXe(xe)
     End Function
+
 End Class
